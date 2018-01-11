@@ -5,6 +5,6 @@ function (id) {
     obj.onmousedown = function(){
         var objL = ev.pageX - obj.offsetX;
         var objT = ev.pageY - obj.offsetY;
-        
+
     };
 }
