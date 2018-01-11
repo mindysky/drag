@@ -8,8 +8,13 @@ function (id) {
         document.onmousemove = function() {
             obj.style.left = ev.pageX - disX +"px";
             obj.style.top = ev.pageY - disY + "px";
-            
+
         };
+        obj.onmouseup = function(){
+            obj.onmousedown = null;
+            obj.onmouseup = null;
+            return false;
+        }
 
     };
 }
