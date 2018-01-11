@@ -5,8 +5,11 @@ function (id) {
     obj.onmousedown = function(ev){
         var disX = ev.pageX - obj.offsetLeft;
         var disY = ev.pageY - obj.offsetTop;
-        obj.onmousemove = function(){
-
+        document.onmousemove = function() {
+            obj.style.left = ev.pageX - disX +"px";
+            obj.style.top = ev.pageY - disY + "px";
+            
         };
+
     };
 }
